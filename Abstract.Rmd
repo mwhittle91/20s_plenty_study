@@ -1,0 +1,17 @@
+---
+title: "Is 20 plenty? A review of recent 20mph speed zone interventions"
+author: 'null'
+output: word_document
+---
+
+# Abstract
+
+All mode fatality data suggests the UK has a good road safety record compared with the rest of Europe. However, the UK also has a relatively low rate of active transport (walking and cycling), which could partly account for the low fatality rate. Surveys suggest the low rate of active transport is a result of the perceived danger of walking or cycling, due to fast moving motor traffic. This observation has driven a growing trend to reduce the default urban speed limit from 30 mph (48 km/h) to 20 mph (32 km/h). The reduced speed limit will encourage more people to choose active transport as a result of changing the perceived danger on the roads, argue proponents of this "20's plenty" campaign. Theoretical studies have shown that the 10mph reduction would help to save lives as a result of improved safety with cyclists and pedestrians being the main benefactors. 
+
+To test the theory that a reduction in road speed will lead to a lower incident rate amongst cyclists and pedestrians, this paper uses the official stats19 dataset on police reported incidents. Two types of natural experiment were conducted: 1) the crash rate of 'intervention zones' was compared with geographically and socio-demographically similar 'control zones' and 2) the crash rate before and after road speed interventions were compared on specific roads. This 2 phase methodology provides new insight into the effectiveness of the "20's plenty" campaign and reducing urban speed limits for sustainable transport overall.
+
+```{r, echo=FALSE}
+# Re-add when we have this data
+# While the accident rate is important to meansure and understand the actual speed of vehicles is also important to measure. Data from cara telemetry systems will also be analysed at the same locations in order to dtermin if there has been a significant reduction in the average traffic speed. 
+```
+
