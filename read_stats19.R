@@ -14,9 +14,9 @@
 #' dl_stats19()
 #'
 #' # Load all stats19 datasets
- ac <- read_stats19_ac()
- ca <- read_stats19_ca()
-# ve <- read_stats19_ve()
+ac <- read_stats19_ac()
+ca <- read_stats19_ca()
+#ve <- read_stats19_ve()
 #' # now you can analyse the UK's stats19 data in a single table
 #' }
 dl_stats19 <- function(zip_url = paste0("http://data.dft.gov.uk.s3.amazonaws.com/",
@@ -165,7 +165,7 @@ read_stats19_ve <- function(data_dir = tempdir(), filename = "Vehicles0514.csv")
   #   ca <- readr::read_csv(file.path(data_dir, "Casualties0514.csv"))
   
   # format ac data
-  #ve <- format_stats19_ve(ve)
+  ve <- format_stats19_ve(ve)
   
   ve
   
@@ -257,7 +257,7 @@ read_stats19_ca <- function(data_dir = tempdir(), filename = "Casualties0514.csv
   ca <- readr::read_csv(file.path(data_dir, "Casualties0514.csv"))
   
   # format ca data
-  #ca <- format_stats19_ca(ca)
+  ca <- format_stats19_ca(ca)
   
   ca
   

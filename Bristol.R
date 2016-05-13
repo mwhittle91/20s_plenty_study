@@ -1,17 +1,8 @@
 install.packages("rgdal")
 install.packages("geojsonio")
-install.packages("maptools")
-install.packages("stplanr")
-install.packages("dplyr")
-install.packages("plyr")
-install.packages("ggplot2")
 library(rgdal)
 library(geojsonio)
-library(maptools)
-library(stplanr)
-library(plyr)
-library(dplyr)
-library(ggplot2)
+
 
 # Read in the incident data - requires read-stats19.R to be run first to create
 # ac and ca
@@ -170,10 +161,11 @@ after_rate_z3 <- after_incidents_z3/a_diff_date_z3
 after_rate_z4 <- after_incidents_z4/a_diff_date_z4
 a_rate <- c(after_rate_z4,after_rate_z3,after_rate_z2,after_rate_z1, after_rate)
 
+zone_labels = c("Z1", "Z2", "Z3", "Z4", "AllZs")
+rates <- data.frame( b_rate, a_rate)
+rates
+
+barplot(as.matrix(rates), beside = TRUE, col = heat.colors(5), names.arg = c("before", "after"))
+legend("topright", zone_labels, pch=15, col=heat.colors(5), bty="n")
 
 
-rates<-data.frame(b_rate, a_rate)
-counts<- table(rates$b_rate, rates$a_rate)
-
-barplot(as.matrix(rates), main = "20mph speed limit introduction", xlab = "Before or After", 
-        col= colors(), legend = c("before","after"),beside = TRUE)
