@@ -165,7 +165,7 @@ zone_labels = c("Z1", "Z2", "Z3", "Z4", "AllZs")
 rates <- data.frame( b_rate, a_rate)
 rates
 
-barplot(as.matrix(rates), beside = TRUE, col = heat.colors(5), names.arg = c("before", "after"))
+all_travel_plot <- barplot(as.matrix(rates), beside = TRUE, col = heat.colors(5), names.arg = c("before", "after"))
 legend("topright", zone_labels, pch=15, col=heat.colors(5), bty="n")
 
 
