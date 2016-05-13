@@ -160,7 +160,7 @@ before_rate_z1 <- before_incidents_z1/b_diff_date_z1
 before_rate_z2 <- before_incidents_z1/b_diff_date_z2
 before_rate_z3 <- before_incidents_z1/b_diff_date_z3
 before_rate_z4 <- before_incidents_z1/b_diff_date_z4
-b_rate <- cbind(before_rate_z4,before_rate_z3,before_rate_z2,before_rate_z1)
+b_rate <- c(before_rate_z4,before_rate_z3,before_rate_z2,before_rate_z1, before_rate)
 
 
 after_rate <- after_incidents/a_diff_date
@@ -168,13 +168,12 @@ after_rate_z1 <- after_incidents_z1/a_diff_date_z1
 after_rate_z2 <- after_incidents_z2/a_diff_date_z2
 after_rate_z3 <- after_incidents_z3/a_diff_date_z3
 after_rate_z4 <- after_incidents_z4/a_diff_date_z4
-a_rate <- cbind(after_rate_z4,after_rate_z3,after_rate_z2,after_rate_z1)
+a_rate <- c(after_rate_z4,after_rate_z3,after_rate_z2,after_rate_z1, after_rate)
 
-rates <- c(b_rate, a_rate)
 
-rates<-data.frame(rates)
 
-install.packages("plotly")
-library(plotly)
+rates<-data.frame(b_rate, a_rate)
+counts<- table(rates$b_rate, rates$a_rate)
 
-barplot(rates)
+barplot(as.matrix(rates), main = "20mph speed limit introduction", xlab = "Before or After", 
+        col= colors(), legend = c("before","after"),beside = TRUE)
